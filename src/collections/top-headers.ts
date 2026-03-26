@@ -4,6 +4,7 @@ export const TopHeaders: CollectionConfig = {
   slug: 'top-headers',
   access: {
     read: () => true,
+    create: () => true,
   },
   admin: {
     useAsTitle: 'site',
