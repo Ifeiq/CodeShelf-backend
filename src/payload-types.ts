@@ -193,10 +193,10 @@ export interface Post {
  * via the `definition` "top-headers".
  */
 export interface TopHeader {
-  id: string;
+  id: number;
   site?: string | null;
   url?: string | null;
-  code?: string | null;
+  codigo?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -238,7 +238,7 @@ export interface PayloadLockedDocument {
       } | null)
     | ({
         relationTo: 'top-headers';
-        value: string | TopHeader;
+        value: number | TopHeader;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -338,9 +338,10 @@ export interface PostsSelect<T extends boolean = true> {
  * via the `definition` "top-headers_select".
  */
 export interface TopHeadersSelect<T extends boolean = true> {
+  id?: T;
   site?: T;
   url?: T;
-  code?: T;
+  codigo?: T;
   updatedAt?: T;
   createdAt?: T;
 }
