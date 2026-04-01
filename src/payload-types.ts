@@ -194,8 +194,8 @@ export interface Post {
  */
 export interface TopHeader {
   id: string;
-  site?: string | null;
-  url?: string | null;
+  site: string;
+  url: string;
   code?: string | null;
   updatedAt: string;
   createdAt: string;
